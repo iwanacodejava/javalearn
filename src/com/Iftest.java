@@ -1,6 +1,6 @@
 package com;
 
-public class iftest {
+public class Iftest {
     public static void main (String[] args ) {
         int x = 3;
         if (x == 3) {
