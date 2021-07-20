@@ -28,7 +28,34 @@ public class GuessGame {
             p2.guess();
             p3.guess();
 
-            guessp1 = p1.number;
+            guessp1 = p1.setNumber();
+            System.out.println("Первый игрок думает, что это " + guessp1);
+
+            guessp2 = p2.setNumber();
+            System.out.println("Второй игрок думает, что это " + guessp2);
+
+            guessp3 = p3.setNumber();
+            System.out.println("Третий игрок думает, что это " + guessp3);
+
+            if (guessp1 == targetNumber) {
+                p1isRight = true;
+            }
+            if (guessp2 == targetNumber) {
+                p2isRight = true;
+            }
+            if (guessp3 == targetNumber) {
+                p3isRight = true;
+            }
+            if (p1isRight || p2isRight || p3isRight) {
+                System.out.println("У нас есть победитель");
+                System.out.println("Первый игрок угадал?" + p1isRight);
+                System.out.println("Второй игрок угадал?" + p2isRight);
+                System.out.println("Третий игрок угадал?" + p3isRight);
+                System.out.println("Конец игры");
+                break;
+            } else {
+                System.out.println("Игроки должны попробовать еще раз");
+            }
         }
 
     }
