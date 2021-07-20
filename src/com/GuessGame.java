@@ -28,13 +28,13 @@ public class GuessGame {
             p2.guess();
             p3.guess();
 
-            guessp1 = p1.setNumber();
+            guessp1 = p1.getNumber();
             System.out.println("Первый игрок думает, что это " + guessp1);
 
-            guessp2 = p2.setNumber();
+            guessp2 = p2.getNumber();
             System.out.println("Второй игрок думает, что это " + guessp2);
 
-            guessp3 = p3.setNumber();
+            guessp3 = p3.getNumber();
             System.out.println("Третий игрок думает, что это " + guessp3);
 
             if (guessp1 == targetNumber) {
